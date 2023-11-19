@@ -5,3 +5,5 @@ Otherwise, if you have a python environment on your computer you can try to crea
 pyinstaller --onefile --icon=appli.ico --name "Reaction Time" reaction.py
 
 This should create several directory in your repo, and the executable file should be in the "dist" directory that has been created.
+
+Last version: Add a random color screen switching
