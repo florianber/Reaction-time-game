@@ -2,25 +2,17 @@ import pygame
 from pygame.constants import QUIT
 import random as rd
 
-# Initialization and setup
-pygame.init()#initie le jeu?
-# FPS = pygame.time.Clock()#wtf??? ça sert à rien pour toi
-# flags = pygame.RESIZABLE#wtf?????? pareil 
+
+pygame.init()
+
 screen = width, height = 1280, 720
-main_surface = pygame.display.set_mode(screen)#gère les fenêtres et affichage graphique, ici c'est pour la création de la fenêtre
-# Oui en gros le main_surface ça être la partie sur laquelle tu vas changer des choses (écrire, changer le background)
+main_surface = pygame.display.set_mode(screen)
 timer_size=80
 timer_font = pygame.font.SysFont('Calibri', timer_size,bold=True)
-record_size=100 #taille de l'écriture du "Record battu!!" oui
-record_font=pygame.font.SysFont('Calibri',record_size,bold=True)#bold = gras, font pour le type de l'écriture etc..
-start_again_size=50# taille de l'écriture "Rejouer"
+record_size=100 
+record_font=pygame.font.SysFont('Calibri',record_size,bold=True)
+start_again_size=50
 start_again_font=pygame.font.SysFont('Calibri',start_again_size,bold=True)
-# Pour être plus rapide tu peux juste écrire comme ça 
-# timer_font = pygame.font.SysFont('Calibri', 80,bold=True)
-# ça t'enlèves la ligne de définition de la taille d'écriture
-
-# The color as the text have been picked up on the website https://humanbenchmark.com/tests/reactiontime, osef en fait
-# Là c'est l'initialistion des couleurs
 
 GREEN = [0, 255, 0]
 RED = [255, 0, 0]
@@ -38,9 +30,9 @@ L_COLOR=[RED,MAUVE,JAUNE,BLEU,ROSE,GRIS]
             
     
 
-# Function to generate a random delay
+
 def generate_random_delay():
-    return rd.randint(1000, 5000)  # Delay in milliseconds (1 to 5 seconds)
+    return rd.randint(1000, 5000)  
 
 # Variables initialisation
 record = 10000#initialisation d'un records énorme comme ça on est sur qu'il soit battu
